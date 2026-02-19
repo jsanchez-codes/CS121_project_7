@@ -1,4 +1,4 @@
-# CS12_project_7
+# CS121_project_7
 (lab) Heap of Students pt 1
 
 # Heap of Students pt 1
