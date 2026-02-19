@@ -5,7 +5,7 @@
 
 ## UML
 
-```Mermaid
+```mermaid
 
 classDiagram
 
