@@ -35,6 +35,6 @@ void Date::init(std::string dateString){
 void Date::printDate(){
 	std::string months[] = {"", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 	std::string stringMonth = months[month];
-	std::cout << stringMonth << " " << day << " " << year << std::endl;
+	std::cout << stringMonth << " " << day << ", " << year << std::endl;
 } // end printDate
 
