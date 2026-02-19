@@ -1,7 +1,7 @@
-#include <string>
-
 #ifndef ADDRESS_H_EXISTS
 #define ADDRESS_H_EXISTS
+
+#include <string>
 
 class Address{
 	private:
@@ -11,7 +11,7 @@ class Address{
 		std::string zip;
 	public:
 		Address();
-		void init(std::string street, city, state, zip);
+		void init(std::string street, std::string city, std::string state, std::string zip);
 		void printAddress();
 };
 
