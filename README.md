@@ -10,6 +10,7 @@
 classDiagram
 
 class Student{
+    studentString: string
     firstName: string
     lastName: string
     address: Address
@@ -17,9 +18,12 @@ class Student{
     gradDate: Date
     creditHours: int
     Student()
+    ~Student()
     init(string studentString)
     printStudent()
-    getLastFirst() string
+    getFirstName() string
+    getLastName() string
+    int getCreditHours()
 }
 
 class Address{
