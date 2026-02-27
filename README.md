@@ -10,39 +10,40 @@
 classDiagram
 
 class Student{
-    studentString: string
-    firstName: string
-    lastName: string
-    address: Address
-    birthDate: Date
-    gradDate: Date
-    creditHours: int
-    Student()
-    ~Student()
-    init(string studentString)
-    printStudent()
-    getFirstName() string
-    getLastName() string
-    int getCreditHours()
+    # string studentString
+    # string firstName
+    # string lastName
+    # Address* Address
+    # Date* birthDate
+    # Date* gradDate
+    # int creditHours
+    + Student()
+    + ~Student()
+    + void init(string studentString)
+    + void printStudent()
+    + string getFirstName()
+    + string getLastName()
+    + int getCreditHours()
 }
 
 class Address{
-    street: string
-    city: string
-    state: string
-    zip: string
-    Address()
-    init(street, city, state, zip)
-    printAddress()
+    # string street
+    # string city
+    # string state
+    # string zip
+    + Address()
+    + void init(street, city, state, zip)
+    + void printAddress()
 }
 
 class Date{
-    month: int
-    day: int
-    year: int
-    Date()
-    init(dateString)
-    printDate()
+    # string dateString
+    # int month
+    # int day
+    # int year
+    + Date()
+    + void init(dateString)
+    + void printDate()
 }
 
 Student --> Address
