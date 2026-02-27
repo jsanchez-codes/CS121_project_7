@@ -30,7 +30,7 @@ int main(){
   loadStudents(students);
   showStudentNames(students);
   
-  delete students;
+  delStudents(students);
 
   return 0;
 } // end main
@@ -56,6 +56,12 @@ void showStudentNames(std::vector<Student*>& students){
 	std::cout << ", " << student->getCreditHours() << std::endl;
   } // end for
 } // end showStudentNames
+
+void delStudents(std::vector<Student*>& students){
+  for (Student* student: students){
+	delete student;
+  } // end for
+} // end delStudents
 
 void testAddress(){
   Address a;
