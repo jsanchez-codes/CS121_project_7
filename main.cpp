@@ -28,7 +28,7 @@ int main(){
 
   std::vector<Student*> students;
   loadStudents(students);
-  //showStudentNames(students);
+  showStudentNames(students);
   
   return 0;
 } // end main
@@ -47,6 +47,13 @@ void loadStudents(std::vector<Student*>& students){
 
   inFile.close();
 } // end loadStudents
+
+void showStudentNames(std::vector<Student*>& students){
+  for (Student* student: students){
+	std::cout << student->getLastFirst();
+	std::cout << ", " << student->getCreditHours() << std::endl;
+  } // end for
+} // end showStudentNames
 
 void testAddress(){
   Address a;
