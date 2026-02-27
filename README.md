@@ -1,7 +1,7 @@
-# CS121_project_7
-(lab) Heap of Students pt 1
+# CS121_project_7_8
+(lab) Heap of Students
 
-# Heap of Students pt 1
+# Heap of Students
 
 ## UML
 
