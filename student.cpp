@@ -6,8 +6,8 @@
 #include "date.h"
 
 Student::Student(){
-	firstName = " ";
-	lastName = " ";
+	firstName = "";
+	lastName = "";
 	address = new Address();
 	birthDate = new Date();
 	gradDate = new Date();
@@ -22,34 +22,35 @@ Student::~Student(){
 
 void Student::init(std::string studentString){
 	std::stringstream converter;
+
 	std::string street;
 	std::string city;
 	std::string state;
 	std::string zip;
 	std::string sBirthDate;
-	std::string sGrabDate;
+	std::string sGradDate;
 	std::string sCreditHours;
 
 	converter.clear();
 	converter.str(studentString);
 
-	getline(converter, firstName, ",");
-	getline(converter, lastName, ",");
+	getline(converter, firstName, ',');
+	getline(converter, lastName, ',');
 
-	getline(converter, street, ",");
-	getline(converter, city, ",");
-	getline(converter, state, ",");
-	getline(converter, zip, ",");
+	getline(converter, street, ',');
+	getline(converter, city, ',');
+	getline(converter, state, ',');
+	getline(converter, zip, ',');
 
 	address->init(street, city, state, zip);
 
-	getline(converter, sBirthDate, ",");
-	getline(converter, sGradDate, ",");
+	getline(converter, sBirthDate, ',');
+	getline(converter, sGradDate, ',');
 
 	birthDate->init(sBirthDate);
 	gradDate->init(sGradDate);
 
-	getline(converter, sCreditHours, ",");
+	getline(converter, sCreditHours, ',');
 
 	converter.clear();
 	converter.str("");
