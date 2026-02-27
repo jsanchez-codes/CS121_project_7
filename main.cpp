@@ -30,6 +30,8 @@ int main(){
   loadStudents(students);
   showStudentNames(students);
   
+  delete students;
+
   return 0;
 } // end main
 
