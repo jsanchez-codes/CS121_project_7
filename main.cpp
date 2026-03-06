@@ -16,6 +16,7 @@ void printStudents(std::vector<Student*>&);
 void showStudentNames(std::vector<Student*>&);
 void findStudent(std::vector<Student*>&);
 void delStudents(std::vector<Student*>&);
+
 std::string menu();
 
 int main(){
@@ -31,17 +32,22 @@ int main(){
 
   bool keepGoing = true;
   while (keepGoing){
-	std::cout << menu;
 	int response;
-	std::cin >> response
-	if 
-  	showStudentNames(students);
-  	if
-	printStudents(students);
-  	if
-	findStudent(students);
-  	if
-	delStudents(students);
+	std::cout << menu;
+	std::cin >> response;
+	if (response == 0) {
+  		inFile.close();
+	} else if (response == 1) {
+		showStudentNames(students);
+	} else if (response == 2) {
+		printStudents(students);
+	} else if (response == 3) {
+		findStudent(students);
+	} else {
+		std::cout << "Invalid input. Please enter a number 0-3." << std::endl;
+  	} // end else
+  } // end while	
+  delStudents(students);
 
   return 0;
 } // end main
@@ -61,7 +67,7 @@ void loadStudents(std::vector<Student*>& students){
   inFile.close();
 } // end loadStudents
 
-void menu(){
+string menu(){
   std::cout << "0) quit" << std::endl;
   std::cout << "1) print all student names" << std::endl;
   std::cout << "2) print all student data" << std::endl;
