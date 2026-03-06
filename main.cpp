@@ -17,7 +17,14 @@ void showStudentNames(std::vector<Student*>&);
 void findStudent(std::vector<Student*>&);
 void delStudents(std::vector<Student*>&);
 
-std::string menu();
+std::string menu(){
+  int response;
+  std::cout << "0) quit" << std::endl;
+  std::cout << "1) print all student names" << std::endl;
+  std::cout << "2) print all student data" << std::endl;
+  std::cout << "3) find a student" << std::endl;
+  std::cout << "please choose 0-3: " << std::endl;
+} // end menu
 
 int main(){
   /*
@@ -32,8 +39,7 @@ int main(){
 
   bool keepGoing = true;
   while (keepGoing){
-	int response;
-	std::cout << menu;
+  	std::cout menu();
 	std::cin >> response;
 	if (response == 0) {
   		inFile.close();
@@ -67,14 +73,6 @@ void loadStudents(std::vector<Student*>& students){
   inFile.close();
 } // end loadStudents
 
-string menu(){
-  std::cout << "0) quit" << std::endl;
-  std::cout << "1) print all student names" << std::endl;
-  std::cout << "2) print all student data" << std::endl;
-  std::cout << "3) find a student" << std::endl;
-  std::cout << "please choose 0-3: " << std::endl;
-} // end menu
-
 void showStudentNames(std::vector<Student*>& students){
   for (Student* student: students){
 	std::cout << student->getLastFirst();
@@ -92,11 +90,11 @@ void findStudent(std::vector<Student*>& students){
   std::string target;
   bool notFound = true;
   getLastName->target;
-  students = string.find(target);
+  target = string.find(students);
   if (target != std::string::npos){
   	std::cout << students << std::endl;
   } else {
- 	std::cout << "No Students Found" << std::endl;
+ 	std::cout << "No Student(s) Found" << std::endl;
   } // end else
 } // end findStudent	
 
