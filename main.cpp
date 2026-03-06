@@ -62,11 +62,19 @@ void printStudents(std::vector<Student*>& students){
 	student->printStudent();
   } // end for
 } // end printStudents
-/*
+
 void findStudent(std::vector<Student*>& students){
   std::string target;
+  bool notFound = true;
+  getLastName->target;
+  students = string.find(target);
+  if (target != std::string::npos){
+  	std::cout << students << std::endl;
+  } else {
+ 	std::cout << "No Students Found" << std::endl;
+  } // end else
+} // end findStudent	
 
-*/
 void delStudents(std::vector<Student*>& students){
   for (Student* student: students){
 	delete student;
