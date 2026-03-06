@@ -29,7 +29,7 @@ int main(){
   std::vector<Student*> students;
   loadStudents(students);
   showStudentNames(students);
-  
+  printStudents(students);
   delStudents(students);
 
   return 0;
@@ -57,6 +57,16 @@ void showStudentNames(std::vector<Student*>& students){
   } // end for
 } // end showStudentNames
 
+void printStudents(std::vector<Student*>& students){
+  for (Student* student: students){
+	student->printStudent();
+  } // end for
+} // end printStudents
+/*
+void findStudent(std::vector<Student*>& students){
+  std::string target;
+
+*/
 void delStudents(std::vector<Student*>& students){
   for (Student* student: students){
 	delete student;
