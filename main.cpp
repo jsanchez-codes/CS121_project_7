@@ -25,12 +25,23 @@ int main(){
   testDate();
   testStudent();
   */
-
+  
   std::vector<Student*> students;
   loadStudents(students);
-  showStudentNames(students);
-  printStudents(students);
-  delStudents(students);
+
+  bool keepGoing = true;
+  while (keepGoing){
+	std::cout << menu;
+	int response;
+	std::cin >> response
+	if 
+  	showStudentNames(students);
+  	if
+	printStudents(students);
+  	if
+	findStudent(students);
+  	if
+	delStudents(students);
 
   return 0;
 } // end main
@@ -49,6 +60,14 @@ void loadStudents(std::vector<Student*>& students){
 
   inFile.close();
 } // end loadStudents
+
+void menu(){
+  std::cout << "0) quit" << std::endl;
+  std::cout << "1) print all student names" << std::endl;
+  std::cout << "2) print all student data" << std::endl;
+  std::cout << "3) find a student" << std::endl;
+  std::cout << "please choose 0-3: " << std::endl;
+} // end menu
 
 void showStudentNames(std::vector<Student*>& students){
   for (Student* student: students){
